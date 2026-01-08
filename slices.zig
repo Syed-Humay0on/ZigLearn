@@ -5,5 +5,7 @@ pub fn main() void {
         // const foo_slice: []u8 = foo[1..];
         const foo_ptr: [*]u8 = &foo;
         // const foo_slice_from_pto_ptr[0..4];
-        std.debug.print("Pointer stores: {*}\n", .{foo_ptr});
+        const third_val = (foo_ptr + 2).*;
+        std.debug.print("Pointer stores values: {}\n", .{third_val});
 }
+
