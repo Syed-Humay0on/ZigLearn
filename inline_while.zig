@@ -10,7 +10,7 @@ pub fn main() void {
     // 3. Our "Cursor" (only exists while the compiler is building)
     comptime var i = 0;
 
-    inline while (i < inputs.len) : (i += 2) {
+    inline while (i < inputs.len) : (i += 1) {
         // This line is written into your program 3 times!
         result += (inputs[i] - '0');
     }
