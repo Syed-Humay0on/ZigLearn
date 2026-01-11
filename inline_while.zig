@@ -12,7 +12,12 @@ pub fn main() void {
 
     inline while (i < inputs.len) : (i += 1) {
         // This line is written into your program 3 times!
-        result += (inputs[i] - '0');
+        // result += (inputs[i] - '0');
+        const val = (inputs[i] - '0');
+        // This is the "Ghost Talk"
+        // It will show up in your terminal BEFORE the program runs.
+        @compileLog("Compiler unrolling loop for index", i, "value", val);
+        result += val;
     }
     std.debug.print("Result: {}", .{result});
 }
