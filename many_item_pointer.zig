@@ -14,6 +14,4 @@ pub fn main() !void {
     const first_elem_ptr: *u8 = &buffer_many_ptr[0];
     const first_elem_ptr_2: *u8 = @ptrCast(buffer_many_ptr);
     try std.testing.expect(first_elem_ptr == first_elem_ptr_2);
-
-
 }
