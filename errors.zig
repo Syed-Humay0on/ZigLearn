@@ -7,12 +7,11 @@ const Error = error {
 
 fn parseNumber(s: []const u8) !u32 {
     if (s.len == 0) return Error.EmptyInput;
-    return std.fmt.parseInt(u32,s, 10)
-        catch Error.InvalidNumber;
+    return std.fmt.parseInt(u32,s, 10);
 }
 
 pub fn main() !void {
     const answer = parseNumber("42") catch 0;
-    const result = try parseNumber("abc") catch 999;
+    const result = parseNumber("") catch 999;
     std.debug.print("answer: {} result: {}\n", .{answer, result});
 }
