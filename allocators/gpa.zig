@@ -31,4 +31,5 @@ pub fn main() !void {
     // --- 4. DELETE (The 'unlink' Syscall) ---
     try std.fs.cwd().deleteFile(file_name);
     std.debug.print("3. File deleted from disk.\n", .{});
+    std.Io.File.writer(file, io, buffer);
 }
